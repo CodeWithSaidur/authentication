@@ -4,4 +4,4 @@ import { registerUser } from '../controllers/user.controller.js';
 
 export const router = express.Router();
 
-router.get('/user', registerUser);
+router.post('/user', registerUser);
