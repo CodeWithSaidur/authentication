@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-// User.model.js
+// user.model.js
 const UserSchema = new mongoose.Schema(
   {
     name: {
@@ -39,4 +39,10 @@ const UserSchema = new mongoose.Schema(
   },
 );
 
+// UserSchema.pre('save', async function (next) {
+//   if (this.isModified) {
+//     this.password = bcrypt.hash(this.password, 10);
+//   }
+//   next();
+// });
 export const User = mongoose.model('User', UserSchema);

@@ -1,3 +1,4 @@
+// index.js
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -25,7 +26,7 @@ ConnectDB();
 
 // Routes
 app.get('/', (req, res) => res.send('Hello from server'));
-app.use('/api/v1', router);
+app.use('/api/v1/user', router);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
